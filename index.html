@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Security Analyst • Storyteller</title>
+  <meta name="description" content="Portfolio of a security analyst, threat hunter, and storyteller. Projects, case studies and cybercrime stories." />
+  <style>
+    /* Reset & base */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#eaf2f8;background:linear-gradient(180deg,#061018 0%, #071126 100%);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+
+    /* Layout */
+    .wrap{max-width:1100px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#00d4ff,#7bf3ff);color:#02121a;font-weight:700}
+    h1{font-size:clamp(20px,3.4vw,36px);margin:0}
+    .tag{color:#9fb5c7;font-size:14px}
+
+    nav{display:flex;gap:12px}
+    nav a{color:#9fb5c7;text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,0.02);color:#fff}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start;margin-top:18px}
+    .hero-card{background:rgba(255,255,255,0.03);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .intro h2{margin:0 0 8px 0;font-size:22px}
+    .intro p{color:#b9d1df;margin:0 0 12px 0;line-height:1.5}
+    .cta{display:inline-block;background:linear-gradient(90deg,#00d4ff,#7bf3ff);color:#02121a;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;color:#cfeaf6;font-size:13px}
+
+    /* Sections */
+    section{margin-top:26px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+
+    /* Project card */
+    .project{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:8px 0}
+    .meta{color:#9fb5c7;font-size:13px}
+    .buttons{display:flex;gap:8px;margin-top:10px}
+    .btn{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none;color:#eaf2f8;font-weight:600;font-size:13px}
+
+    /* Story card */
+    .story{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)}
+    .story .thumb{width:96px;height:72px;border-radius:8px;flex-shrink:0;background:#0d1c26;display:grid;place-items:center;color:#7fdfff;font-weight:700}
+    .story h4{margin:0;font-size:16px}
+    .story p{margin:6px 0 0 0;color:#9fb5c7;font-size:13px}
+
+    /* Contact */
+    .contact-card{padding:16px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+    .contact-card a{color:#aee9ff}
+
+    footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;color:#9fb5c7;font-size:13px;flex-wrap:wrap;gap:12px}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .logo{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">VS</div>
+        <div>
+          <h1>Portfolio & Stories</h1>
+          <div class="tag">Security Analyst • Threat Hunter • Storyteller</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#stories">Stories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <div class="hero-card intro">
+          <h2>Real hacks. Real stories. Real lessons.</h2>
+          <p>I'm a security analyst and threat hunter who writes narrative-driven explanations of cyber incidents. I build tools, hunt threats, and tell stories that help people understand security without the jargon.</p>
+
+          <div class="skills" aria-hidden="false">
+            <span class="skill">Threat Hunting</span>
+            <span class="skill">Incident Response</span>
+            <span class="skill">Cloud Security</span>
+            <span class="skill">Python / Bash</span>
+            <span class="skill">Forensics</span>
+            <span class="skill">Filmmaking</span>
+          </div>
+
+          <div style="margin-top:14px">
+            <a class="cta" href="#projects">See Projects</a>
+            <a href="#stories" class="btn" style="margin-left:8px">Read Stories</a>
+          </div>
+        </div>
+
+        <section id="projects">
+          <h2 style="margin-top:18px">Selected Projects</h2>
+          <div class="grid">
+
+            <article class="project">
+              <h3>SMB Threat Hunting Kit</h3>
+              <div class="meta">Open-source toolkit for small businesses to run basic threat detection and incident templates.</div>
+              <p style="margin-top:10px">Built with Wazuh and lightweight scripts to automate scans, alerting, and reporting. Includes playbooks for common ransomware scenarios.</p>
+              <div class="buttons">
+                <a class="btn" href="#">Case Study</a>
+                <a class="btn" href="#">Repo</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>Attack Surface Reduction Playbook</h3>
+              <div class="meta">A concise, deployable playbook for reducing exposure across remote teams.</div>
+              <p style="margin-top:10px">Includes checklists, prioritized tasks, and a 30-day hardening plan tailored for SMB environments.</p>
+              <div class="buttons">
+                <a class="btn" href="#">Download</a>
+                <a class="btn" href="#">Demo</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>Short Film: The Silent Packet</h3>
+              <div class="meta">A short film blending cybersecurity themes with personal storytelling.</div>
+              <p style="margin-top:10px">Directed and edited using AI-assisted tools and traditional filmmaking techniques. Festival shortlisted.</p>
+              <div class="buttons">
+                <a class="btn" href="#">Watch</a>
+                <a class="btn" href="#">Making Of</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section id="stories">
+          <h2 style="margin-top:24px">Cybercrime Stories</h2>
+
+          <!-- Story list: replace with real links when available -->
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
+
+            <article class="story">
+              <div class="thumb">AT</div>
+              <div>
+                <h4>The ATM That Spat Out Millions</h4>
+                <p>How jackpotting gangs trick ATMs and what banks missed — narrative + practical mitigation steps.</p>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="thumb">PH</div>
+              <div>
+                <h4>The Phishing Email That Bought a Mansion</h4>
+                <p>A BEC case study that explains social engineering, wire fraud, and defensive controls you can implement.</p>
+              </div>
+            </article>
+
+            <article class="story">
+              <div class="thumb">RH</div>
+              <div>
+                <h4>A Hospital Held Hostage</h4>
+                <p>Ransomware in healthcare — narrative of the attack, patient impact, and lessons for practitioners.</p>
+              </div>
+            </article>
+
+          </div>
+
+          <div style="margin-top:12px;color:#9fb5c7;font-size:14px">All stories are written in a narrative-first style with a technical appendix for security teams.</div>
+        </section>
+      </div>
+
+      <aside class="hero-card">
+        <div class="contact-card">
+          <h3 style="margin:0 0 8px 0">Get in touch</h3>
+          <p class="meta" style="margin:0 0 12px 0">Available for freelance engagements, consulting, and speaking.</p>
+          <p style="margin:0 0 8px 0"><strong>Email</strong><br><a href="mailto:vishnu@vishnushanmugan.in">vishnu@vishnushanmugan.in</a></p>
+          <p style="margin:0 0 12px 0"><strong>Links</strong><br>
+            <a href="#" style="color:#aee9ff">LinkedIn</a> • <a href="#" style="color:#aee9ff">GitHub</a> • <a href="#" style="color:#aee9ff">YouTube</a>
+          </p>
+
+          <div style="margin-top:8px">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="#stories">Read Stories</a>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
+          <h4 style="margin:0 0 8px 0">Quick CV</h4>
+          <div class="meta">MTech • CPT Certified • 5+ years in security</div>
+          <div style="margin-top:10px"><a class="btn" href="#">Download Resume</a></div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="about">
+      <h2>About</h2>
+      <div style="margin-top:12px;padding:16px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
+        <p style="margin:0;color:#cfeaf6;line-height:1.6">I combine hands-on threat hunting with storytelling to make security lessons accessible. My work includes incident response, building lightweight detection tooling for SMBs, and creating narrative-driven content that bridges the gap between technical teams and everyday users.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 300px;gap:16px">
+        <div style="padding:16px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
+          <h3 style="margin-top:0">Work with me</h3>
+          <p class="meta" style="margin:0 0 12px 0">For consulting, speaking or creative collaborations, reach out by email or LinkedIn.</p>
+          <p style="margin:0"><strong>Email</strong><br><a href="mailto:vishnu@vishnushanmugan.in" style="color:#aee9ff">vishnu@vishnushanmugan.in</a></p>
+        </div>
+
+        <div style="padding:16px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
+          <h4 style="margin:0 0 8px 0">Location</h4>
+          <p class="meta" style="margin:0">Thrissur, Kerala, India</p>
+
+          <h4 style="margin:12px 0 8px 0">Follows & Links</h4>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a href="#" class="btn">LinkedIn</a>
+            <a href="#" class="btn">GitHub</a>
+            <a href="#" class="btn">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2025 — Portfolio • Cybercrime Stories</div>
+      <div style="color:#9fb5c7">Built with • HTML & CSS • Hosted on GitHub Pages</div>
+    </footer>
+  </div>
+</body>
+</html>
