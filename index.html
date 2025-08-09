@@ -1,238 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio — Security Analyst • Storyteller</title>
-  <meta name="description" content="Portfolio of a security analyst, threat hunter, and storyteller. Projects, case studies and cybercrime stories." />
-  <style>
-    /* Reset & base */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#eaf2f8;background:linear-gradient(180deg,#061018 0%, #071126 100%);-webkit-font-smoothing:antialiased}
-    a{color:inherit}
-    img{max-width:100%;display:block}
-
-    /* Layout */
-    .wrap{max-width:1100px;margin:28px auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#00d4ff,#7bf3ff);color:#02121a;font-weight:700}
-    h1{font-size:clamp(20px,3.4vw,36px);margin:0}
-    .tag{color:#9fb5c7;font-size:14px}
-
-    nav{display:flex;gap:12px}
-    nav a{color:#9fb5c7;text-decoration:none;padding:8px 10px;border-radius:8px}
-    nav a:hover{background:rgba(255,255,255,0.02);color:#fff}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start;margin-top:18px}
-    .hero-card{background:rgba(255,255,255,0.03);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .intro h2{margin:0 0 8px 0;font-size:22px}
-    .intro p{color:#b9d1df;margin:0 0 12px 0;line-height:1.5}
-    .cta{display:inline-block;background:linear-gradient(90deg,#00d4ff,#7bf3ff);color:#02121a;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
-
-    /* Skills */
-    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-    .skill{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;color:#cfeaf6;font-size:13px}
-
-    /* Sections */
-    section{margin-top:26px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-
-    /* Project card */
-    .project{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-    .project h3{margin:8px 0}
-    .meta{color:#9fb5c7;font-size:13px}
-    .buttons{display:flex;gap:8px;margin-top:10px}
-    .btn{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none;color:#eaf2f8;font-weight:600;font-size:13px}
-
-    /* Story card */
-    .story{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)}
-    .story .thumb{width:96px;height:72px;border-radius:8px;flex-shrink:0;background:#0d1c26;display:grid;place-items:center;color:#7fdfff;font-weight:700}
-    .story h4{margin:0;font-size:16px}
-    .story p{margin:6px 0 0 0;color:#9fb5c7;font-size:13px}
-
-    /* Contact */
-    .contact-card{padding:16px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
-    .contact-card a{color:#aee9ff}
-
-    footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;color:#9fb5c7;font-size:13px;flex-wrap:wrap;gap:12px}
-
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .logo{width:48px;height:48px}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Senior Cybersecurity Expert</title>
+    <meta name="description" content="Professional cybersecurity portfolio showcasing expertise in SOC operations, endpoint security, cloud security, and penetration testing.">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">VS</div>
-        <div>
-          <h1>Portfolio & Stories</h1>
-          <div class="tag">Security Analyst • Threat Hunter • Storyteller</div>
+<body data-color-scheme="dark">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">AC</span>
+                <span class="nav-name">Alex Chen</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </div>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#stories">Stories</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    </nav>
 
-    <main class="hero">
-      <div>
-        <div class="hero-card intro">
-          <h2>Real hacks. Real stories. Real lessons.</h2>
-          <p>I'm a security analyst and threat hunter who writes narrative-driven explanations of cyber incidents. I build tools, hunt threats, and tell stories that help people understand security without the jargon.</p>
-
-          <div class="skills" aria-hidden="false">
-            <span class="skill">Threat Hunting</span>
-            <span class="skill">Incident Response</span>
-            <span class="skill">Cloud Security</span>
-            <span class="skill">Python / Bash</span>
-            <span class="skill">Forensics</span>
-            <span class="skill">Filmmaking</span>
-          </div>
-
-          <div style="margin-top:14px">
-            <a class="cta" href="#projects">See Projects</a>
-            <a href="#stories" class="btn" style="margin-left:8px">Read Stories</a>
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Alex Chen</h1>
+                <h2 class="hero-subtitle">Senior Cybersecurity Expert</h2>
+                <p class="hero-tagline">Protecting Digital Assets Through Advanced Security Operations</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn--primary">View Projects</a>
+                    <a href="#contact" class="btn btn--outline">Get In Touch</a>
+                </div>
+            </div>
         </div>
-
-        <section id="projects">
-          <h2 style="margin-top:18px">Selected Projects</h2>
-          <div class="grid">
-
-            <article class="project">
-              <h3>SMB Threat Hunting Kit</h3>
-              <div class="meta">Open-source toolkit for small businesses to run basic threat detection and incident templates.</div>
-              <p style="margin-top:10px">Built with Wazuh and lightweight scripts to automate scans, alerting, and reporting. Includes playbooks for common ransomware scenarios.</p>
-              <div class="buttons">
-                <a class="btn" href="#">Case Study</a>
-                <a class="btn" href="#">Repo</a>
-              </div>
-            </article>
-
-            <article class="project">
-              <h3>Attack Surface Reduction Playbook</h3>
-              <div class="meta">A concise, deployable playbook for reducing exposure across remote teams.</div>
-              <p style="margin-top:10px">Includes checklists, prioritized tasks, and a 30-day hardening plan tailored for SMB environments.</p>
-              <div class="buttons">
-                <a class="btn" href="#">Download</a>
-                <a class="btn" href="#">Demo</a>
-              </div>
-            </article>
-
-            <article class="project">
-              <h3>Short Film: The Silent Packet</h3>
-              <div class="meta">A short film blending cybersecurity themes with personal storytelling.</div>
-              <p style="margin-top:10px">Directed and edited using AI-assisted tools and traditional filmmaking techniques. Festival shortlisted.</p>
-              <div class="buttons">
-                <a class="btn" href="#">Watch</a>
-                <a class="btn" href="#">Making Of</a>
-              </div>
-            </article>
-
-          </div>
-        </section>
-
-        <section id="stories">
-          <h2 style="margin-top:24px">Cybercrime Stories</h2>
-
-          <!-- Story list: replace with real links when available -->
-          <div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
-
-            <article class="story">
-              <div class="thumb">AT</div>
-              <div>
-                <h4>The ATM That Spat Out Millions</h4>
-                <p>How jackpotting gangs trick ATMs and what banks missed — narrative + practical mitigation steps.</p>
-              </div>
-            </article>
-
-            <article class="story">
-              <div class="thumb">PH</div>
-              <div>
-                <h4>The Phishing Email That Bought a Mansion</h4>
-                <p>A BEC case study that explains social engineering, wire fraud, and defensive controls you can implement.</p>
-              </div>
-            </article>
-
-            <article class="story">
-              <div class="thumb">RH</div>
-              <div>
-                <h4>A Hospital Held Hostage</h4>
-                <p>Ransomware in healthcare — narrative of the attack, patient impact, and lessons for practitioners.</p>
-              </div>
-            </article>
-
-          </div>
-
-          <div style="margin-top:12px;color:#9fb5c7;font-size:14px">All stories are written in a narrative-first style with a technical appendix for security teams.</div>
-        </section>
-      </div>
-
-      <aside class="hero-card">
-        <div class="contact-card">
-          <h3 style="margin:0 0 8px 0">Get in touch</h3>
-          <p class="meta" style="margin:0 0 12px 0">Available for freelance engagements, consulting, and speaking.</p>
-          <p style="margin:0 0 8px 0"><strong>Email</strong><br><a href="mailto:vishnu@vishnushanmugan.in">vishnu@vishnushanmugan.in</a></p>
-          <p style="margin:0 0 12px 0"><strong>Links</strong><br>
-            <a href="#" style="color:#aee9ff">LinkedIn</a> • <a href="#" style="color:#aee9ff">GitHub</a> • <a href="#" style="color:#aee9ff">YouTube</a>
-          </p>
-
-          <div style="margin-top:8px">
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="btn" href="#stories">Read Stories</a>
-          </div>
+        <div class="hero-background">
+            <div class="cyber-grid"></div>
         </div>
-
-        <div style="margin-top:14px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
-          <h4 style="margin:0 0 8px 0">Quick CV</h4>
-          <div class="meta">MTech • CPT Certified • 5+ years in security</div>
-          <div style="margin-top:10px"><a class="btn" href="#">Download Resume</a></div>
-        </div>
-      </aside>
-    </main>
-
-    <section id="about">
-      <h2>About</h2>
-      <div style="margin-top:12px;padding:16px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
-        <p style="margin:0;color:#cfeaf6;line-height:1.6">I combine hands-on threat hunting with storytelling to make security lessons accessible. My work includes incident response, building lightweight detection tooling for SMBs, and creating narrative-driven content that bridges the gap between technical teams and everyday users.</p>
-      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 300px;gap:16px">
-        <div style="padding:16px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
-          <h3 style="margin-top:0">Work with me</h3>
-          <p class="meta" style="margin:0 0 12px 0">For consulting, speaking or creative collaborations, reach out by email or LinkedIn.</p>
-          <p style="margin:0"><strong>Email</strong><br><a href="mailto:vishnu@vishnushanmugan.in" style="color:#aee9ff">vishnu@vishnushanmugan.in</a></p>
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-summary">Experienced cybersecurity professional with 8+ years specializing in Security Operations Center (SOC) management, endpoint security, cloud security architecture, and penetration testing. Proven track record of implementing comprehensive security frameworks and incident response protocols for enterprise environments.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <div class="profile-icon">👤</div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div style="padding:16px;border-radius:10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.02)">
-          <h4 style="margin:0 0 8px 0">Location</h4>
-          <p class="meta" style="margin:0">Thrissur, Kerala, India</p>
-
-          <h4 style="margin:12px 0 8px 0">Follows & Links</h4>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a href="#" class="btn">LinkedIn</a>
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn">YouTube</a>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <footer>
-      <div>© 2025 — Portfolio • Cybercrime Stories</div>
-      <div style="color:#9fb5c7">Built with • HTML & CSS • Hosted on GitHub Pages</div>
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-title">SOC Operations</h3>
+                    <ul class="skill-list">
+                        <li>SIEM Management (Splunk, QRadar, Sentinel)</li>
+                        <li>Incident Response & Analysis</li>
+                        <li>Threat Hunting & Intelligence</li>
+                        <li>Security Monitoring & Alerting</li>
+                        <li>Log Analysis & Correlation</li>
+                        <li>SOC Automation & Orchestration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-title">Endpoint Security</h3>
+                    <ul class="skill-list">
+                        <li>EDR/XDR Implementation (CrowdStrike, SentinelOne)</li>
+                        <li>Endpoint Protection Platforms</li>
+                        <li>Malware Analysis & Reverse Engineering</li>
+                        <li>Host-based Intrusion Detection</li>
+                        <li>Endpoint Configuration Management</li>
+                        <li>Mobile Device Security</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-title">Cloud Security</h3>
+                    <ul class="skill-list">
+                        <li>AWS Security Architecture</li>
+                        <li>Azure Security Center</li>
+                        <li>Cloud Access Security Broker (CASB)</li>
+                        <li>Container Security (Docker, Kubernetes)</li>
+                        <li>Infrastructure as Code Security</li>
+                        <li>Multi-cloud Security Management</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-title">Penetration Testing</h3>
+                    <ul class="skill-list">
+                        <li>Web Application Security Testing</li>
+                        <li>Network Infrastructure Penetration Testing</li>
+                        <li>Social Engineering Assessments</li>
+                        <li>Wireless Network Security Testing</li>
+                        <li>API Security Testing</li>
+                        <li>Red Team Operations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Enterprise SOC Modernization</h3>
+                        <div class="project-type">SOC Operations</div>
+                    </div>
+                    <p class="project-description">Led the complete overhaul of a legacy SOC environment, implementing advanced SIEM capabilities, automated threat detection, and 24/7 monitoring for a Fortune 500 company.</p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Splunk Enterprise Security</span>
+                        <span class="tech-tag">Phantom SOAR</span>
+                        <span class="tech-tag">CrowdStrike Falcon</span>
+                        <span class="tech-tag">Threat Intelligence Platforms</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement">✓ Reduced MTTD by 75%</div>
+                        <div class="achievement">✓ Automated 80% of tier-1 alerts</div>
+                        <div class="achievement">✓ Improved threat detection accuracy by 60%</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Multi-Cloud Security Framework</h3>
+                        <div class="project-type">Cloud Security</div>
+                    </div>
+                    <p class="project-description">Designed and implemented a comprehensive security framework for hybrid cloud infrastructure spanning AWS, Azure, and on-premises environments.</p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">AWS Security Hub</span>
+                        <span class="tech-tag">Azure Sentinel</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">CloudFormation</span>
+                        <span class="tech-tag">Kubernetes</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement">✓ Unified security monitoring across 3 cloud platforms</div>
+                        <div class="achievement">✓ Implemented zero-trust architecture</div>
+                        <div class="achievement">✓ Achieved 99.9% compliance score</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Advanced Persistent Threat Simulation</h3>
+                        <div class="project-type">Penetration Testing</div>
+                    </div>
+                    <p class="project-description">Conducted comprehensive red team assessment simulating APT tactics, techniques, and procedures to test enterprise security controls and incident response capabilities.</p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Metasploit</span>
+                        <span class="tech-tag">Cobalt Strike</span>
+                        <span class="tech-tag">Empire</span>
+                        <span class="tech-tag">BloodHound</span>
+                        <span class="tech-tag">Custom C2 Framework</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement">✓ Identified 23 critical vulnerabilities</div>
+                        <div class="achievement">✓ Tested IR procedures under realistic conditions</div>
+                        <div class="achievement">✓ Provided detailed remediation roadmap</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Endpoint Security Transformation</h3>
+                        <div class="project-type">Endpoint Security</div>
+                    </div>
+                    <p class="project-description">Migrated from legacy antivirus to next-generation endpoint protection, deploying EDR solutions across 10,000+ endpoints with zero disruption to business operations.</p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">SentinelOne Singularity</span>
+                        <span class="tech-tag">Microsoft Defender ATP</span>
+                        <span class="tech-tag">Carbon Black</span>
+                        <span class="tech-tag">YARA Rules</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement">✓ 100% endpoint coverage</div>
+                        <div class="achievement">✓ 50% reduction in false positives</div>
+                        <div class="achievement">✓ Advanced threat detection capabilities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">2021 - Present</div>
+                    <div class="experience-content">
+                        <h3 class="experience-position">Senior Security Architect</h3>
+                        <h4 class="experience-company">TechCorp Industries</h4>
+                        <ul class="experience-responsibilities">
+                            <li>Lead security architecture design for cloud and hybrid environments</li>
+                            <li>Manage SOC operations and incident response team of 12 analysts</li>
+                            <li>Oversee penetration testing and vulnerability assessment programs</li>
+                            <li>Develop and implement enterprise security policies and procedures</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">2019 - 2021</div>
+                    <div class="experience-content">
+                        <h3 class="experience-position">SOC Manager</h3>
+                        <h4 class="experience-company">SecureFlow Solutions</h4>
+                        <ul class="experience-responsibilities">
+                            <li>Managed 24/7 security operations center with 15 team members</li>
+                            <li>Implemented advanced threat detection and response capabilities</li>
+                            <li>Coordinated incident response activities and forensic investigations</li>
+                            <li>Established threat intelligence program and threat hunting operations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">2016 - 2019</div>
+                    <div class="experience-content">
+                        <h3 class="experience-position">Senior Security Analyst</h3>
+                        <h4 class="experience-company">CyberGuard Corp</h4>
+                        <ul class="experience-responsibilities">
+                            <li>Performed advanced malware analysis and reverse engineering</li>
+                            <li>Conducted penetration testing and security assessments</li>
+                            <li>Developed custom security tools and automation scripts</li>
+                            <li>Mentored junior analysts and provided technical training</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🛡️</div>
+                    <h3 class="cert-name">CISSP</h3>
+                    <p class="cert-full-name">Certified Information Systems Security Professional</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🔍</div>
+                    <h3 class="cert-name">CEH</h3>
+                    <p class="cert-full-name">Certified Ethical Hacker</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🔐</div>
+                    <h3 class="cert-name">GSEC</h3>
+                    <p class="cert-full-name">GIAC Security Essentials</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">☁️</div>
+                    <h3 class="cert-name">AWS Security</h3>
+                    <p class="cert-full-name">AWS Certified Security - Specialty</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🔷</div>
+                    <h3 class="cert-name">Azure Security</h3>
+                    <p class="cert-full-name">Microsoft Azure Security Engineer</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">📋</div>
+                    <h3 class="cert-name">CISM</h3>
+                    <p class="cert-full-name">Certified Information Security Manager</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🚨</div>
+                    <h3 class="cert-name">GCIH</h3>
+                    <p class="cert-full-name">SANS GCIH - Incident Handler</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🎯</div>
+                    <h3 class="cert-name">Security+</h3>
+                    <p class="cert-full-name">CompTIA Security+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:alex.chen@cybersec.com" class="contact-value">alex.chen@cybersec.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <a href="tel:+15551234567" class="contact-value">+1 (555) 123-4567</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location:</span>
+                        <span class="contact-value">San Francisco, CA</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/alexchen-cybersec" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/alexchen-security" target="_blank" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Alex Chen. All rights reserved.</p>
+                <p>Professional Cybersecurity Portfolio</p>
+            </div>
+        </div>
     </footer>
-  </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
